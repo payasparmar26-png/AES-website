@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AES Encrypt/Decrypt</title>
+  <style>
+    body { font-family: Arial; padding: 40px; background: #f4f6f9; }
+    h1 { color: #2c3e50; }
+    form { margin-top: 20px; }
+    textarea { width: 100%; height: 100px; padding: 10px; }
+    button { padding: 10px 20px; margin-top: 10px; cursor: pointer; }
+    .result { margin-top: 20px; background: #fff; padding: 15px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <h1>🔐 AES Encryption & Decryption</h1>
+  <form method="POST">
+    <textarea name="text" placeholder="Enter your text here..." required></textarea><br>
+    <button type="submit" name="action" value="encrypt">Encrypt</button>
+    <button type="submit" name="action" value="decrypt">Decrypt</button>
+  </form>
+
+  {% if result %}
+  <div class="result">
+    <strong>Result:</strong> {{ result }}
+  </div>
+  {% endif %}
+</body>
+</html>
